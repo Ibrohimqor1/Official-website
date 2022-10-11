@@ -1,0 +1,264 @@
+* {
+  margin: 0 ;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  box-sizing: border-box;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #eff4fd;
+}
+nav {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+  font-size: 18px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  color: red;
+}
+/* deatl */
+.detal {
+  margin-left: 8%;
+  margin-top: 13%;
+}
+.detal h1 {
+  font-size: 50px;
+  color: #212121;
+  margin-bottom: 20px;
+}
+span {
+  color: orange;
+}
+.detal p {
+  color: #555;
+  line-height: 22px;
+}
+.detal a {
+  background-color: #212121;
+  padding: 10px 18px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  display: inline-block;
+  margin: 30px 0;
+  border-radius: 5px;
+}
+.detal a:hover {
+  background-color: yellow;
+  color: #555;
+  transition: 1s linear;
+}
+/* images */
+.images {
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+.images img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: bottom 1s, left 1s;
+}
+.images:hover .shape {
+  bottom: 55px;
+  transition: 0.5s linear;
+}
+.images:hover .girl {
+  left: 60%;
+  transition: 0.5s linear;
+}
+
+/*  */
+
+header{
+    display: flex;
+    justify-content:center;
+    min-height: 60vh;
+    background-color: #1c1c1c;
+    border:#45f3ff;
+
+}
+.box{
+    position: relative;
+    width: 380px;
+    height: 480px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 50px;
+    transition: 0.5s linear;
+
+}
+.box:hover{
+    width: 380px;
+    height: 480px;
+    margin-top: 70px;
+    transition: 0.5s linear;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+     #45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+     #45f3ff,#45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate
+{
+0%
+{
+    transform: rotate(0deg);
+}
+100%
+{
+    transform: rotate(360deg);
+}
+
+}
+.form{
+position: absolute;
+inset: 2px;
+border-radius: 8px;
+background: #28292d;
+z-index: 10;
+padding: 50px 40px;
+display: flex;
+flex-direction: column;
+
+}
+.form h2{
+    color: #45f3ff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+
+}
+.inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: #45f3ff;
+    transform: translateX(-10px) translateY(-34px);
+font-size: 0.75em;
+
+}
+.inputBox i{
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+
+}
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i
+{
+    height: 44px;
+
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+
+}
+.links a{
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+
+
+}
+.links a:hover,
+.links a:nth-child(2)
+{
+    color: #45f3ff;
+
+}
+.btn
+{
+    border: none;
+    outline: none;
+    background: #45f3ff;
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+
+
+}
+.btn:active{
+    opacity: 0.8;
+
+}
